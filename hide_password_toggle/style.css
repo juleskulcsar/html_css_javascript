@@ -1,0 +1,51 @@
+body {
+    box-sizing: border-box;
+    background-color: #EDEBEB;
+}
+
+input {
+    padding: 4px 8px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 8px;
+    height: 30px;
+    background: transparent;
+    color: rgb(104, 102, 102);
+    cursor: default;
+    outline: none;
+}
+
+button {
+    padding: 4px 8px;
+    border: 1px solid #CDC6C8;
+    margin-left: 4px;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 8px;
+    height: 40px;
+    width: 4em;
+    background: #845EC2;
+    cursor: pointer;
+    color: white;
+    filter: drop-shadow(0 0 0.35rem #CDC6C8);
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    width:80%;
+    max-width: 800px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aliceblue;
+    resize: both;
+    overflow: auto;
+}
