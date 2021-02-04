@@ -1,0 +1,67 @@
+body {
+    box-sizing: border-box;
+    background: black;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    z-index: 9;
+    margin: 20px;
+    width: 700px;
+    max-width: 1000px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    box-shadow: 50px, 60px, 189px rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    filter: drop-shadow(5px 4px 12px #22292e);
+    border: solid 1px transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(
+            125deg,
+            rgba(34, 41, 46, 0.9) 21.83%,
+            rgba(75, 120, 165, 0.1) 189.95%
+        ),
+        url('noise.svg');
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-image-source: linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 1)
+    );
+    border-image-slice: 1;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('blob.svg') no-repeat;
+    opacity: 0.7;
+}
+
+p {
+    position: absolute;
+    color: white;
+    z-index: 10;
+}
+
+.text {
+    font-size: 70px;
+    position: absolute;
+    right: 220px;
+    top: 20px;
+    color: white;
+    z-index: 2;
+}
