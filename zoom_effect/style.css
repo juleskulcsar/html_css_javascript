@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background: rgb(68, 83, 93);
+    background: linear-gradient(
+        81deg,
+        rgba(68, 83, 93, 1) 0%,
+        rgba(45, 54, 61, 1) 65%
+    );
+}
+
+.container {
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    top: 10em;
+    filter: drop-shadow(1px 4px 12px #101820);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.8);
+    }
+}
+
+img {
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    transform-origin: center bottom;
+    animation: zoom 10s infinite linear;
+}
