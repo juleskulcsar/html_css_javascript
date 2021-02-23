@@ -1,0 +1,34 @@
+body {
+    box-sizing: border-box;
+    bbackground: rgb(239, 241, 242);
+    background: linear-gradient(
+        81deg,
+        rgba(239, 241, 242, 1) 1%,
+        rgba(214, 219, 222, 1) 95%
+    );
+}
+
+img {
+    height: 400px;
+}
+
+.container {
+    position: relative;
+    top: 4em;
+    align-self: center;
+    text-align: center;
+}
+.top {
+    position: absolute;
+    top: 30px;
+    border: 1px solid transparent;
+    filter: blur(25px);
+    border-radius: 20px;
+}
+.bottom {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
