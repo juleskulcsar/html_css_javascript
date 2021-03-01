@@ -5,17 +5,18 @@ body {
 
 .container {
     position: absolute;
-    left: 100px;
+    left: 300px;
+    top: 50px;
     text-align: center;
     display: flex;
-    flex-direction: row;
-    width: 80%;
+    flex-direction: column;
+    /* width: 80%; */
     justify-content: space-around;
 }
 
 .white {
-    /* position: relative; */
-    font-size: 150px;
+    margin: 0;
+    font-size: 170px;
     color: #f7f8f8;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
         0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
@@ -23,16 +24,16 @@ body {
 }
 
 .black {
-    /* position: relative; */
-    font-size: 150px;
+    margin: 0;
+    font-size: 170px;
     color: #424139;
     text-shadow: 0 1px 0 #32312b, 0 2px 0 #32312b, 0 3px 0 #32312b,
         0 4px 0 #32312b, 0 5px 0 #32312b, 0 6px 0 #32312b, 0 7px 0 #32312b,
         0 8px 0 #32312b, 0 9px 0 #32312b, 0 50px 30px rgba(0, 0, 0, 0.8);
 }
 .red {
-    /* position: relative; */
-    font-size: 150px;
+    margin: 0;
+    font-size: 170px;
     color: #d83b0d;
     text-shadow: 0 1px 0 #ae3214, 0 2px 0 #ae3214, 0 3px 0 #ae3214,
         0 4px 0 #ae3214, 0 5px 0 #ae3214, 0 6px 0 #ae3214, 0 7px 0 #ae3214,
