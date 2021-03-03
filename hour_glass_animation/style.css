@@ -1,0 +1,17 @@
+body {
+    box-sizing: border-box;
+    background: rgb(21, 49, 68);
+    background: linear-gradient(
+        81deg,
+        rgba(21, 49, 68, 1) 0%,
+        rgba(91, 111, 124, 1) 100%
+    );
+}
+
+#hourglass {
+    position: relative;
+    top: 100px;
+    font-size: 100px;
+    color: #d6dbde;
+    text-align: center;
+}
