@@ -58,3 +58,7 @@ img {
     width: 400px;
     margin-top: 8px;
 }
+
+.default {
+    display: block;
+}
