@@ -1,0 +1,177 @@
+body {
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+}
+
+.filter {
+    height: 400px;
+}
+
+/* blue frame, fork 
+invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%) */
+
+/* blue saddle
+invert(42%) sepia(13%) saturate(8994%) hue-rotate(215deg) brightness(23%) contrast(97%) */
+
+/* green saddle, handle
+invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%) */
+
+/* asfalt frame, rims, fork, saddle
+invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%) */
+
+/* asfalt lever, handle
+invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%) */
+
+/* black lever
+invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(148%) */
+
+/* red frame, fork
+invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
+
+/* red rims
+invert(90%) sepia(30%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
+
+/* red saddle
+invert(60%) sepia(20%) saturate(7049%) hue-rotate(5358deg) brightness(40%) contrast(90%) */
+
+/* red handle
+invert(30%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
+
+/* frame 
+blue  invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%)
+asflat invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
+red invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
+
+/* fork
+blue invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%) 
+asflat invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
+red invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
+
+/* rims 
+asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
+red invert(90%) sepia(30%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
+
+/* saddle 
+blue invert(42%) sepia(13%) saturate(8994%) hue-rotate(215deg) brightness(23%) contrast(97%)
+green invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%)
+asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
+red invert(60%) sepia(20%) saturate(7049%) hue-rotate(5358deg) brightness(40%) contrast(90%) */
+
+/* lever 
+asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%)
+black invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(148%) */
+
+/* handle 
+green invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%)
+asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%)
+red invert(30%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
+
+#FRAME {
+    filter: invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg)
+        brightness(50%) contrast(98%);
+}
+
+body {
+    /* box-sizing: border-box; */
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid transparent;
+    background: transparent;
+    width: 200px;
+    margin: 0;
+}
+
+.tabs {
+    width: 600px;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    filter: drop-shadow(5px 4px 12px #989fa3);
+    background: rgb(189, 197, 203);
+    background: linear-gradient(
+        81deg,
+        rgb(236, 240, 243) 0%,
+        rgb(207, 212, 216) 71%
+    );
+}
+
+button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #b3b9bd;
+    color: white;
+    outline: none;
+}
+
+button:active {
+    border: 1px solid white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.default {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+#blue {
+    background-color: #223061;
+}
+
+#orange {
+    background-color: #f68507;
+}
+
+#green {
+    background-color: #1a3f24;
+}
+
+#red {
+    background-color: #96060e;
+}
+
+#asphalt {
+    background-color: #353434;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.rotate {
+    animation: rotation 2s;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>SVG Bycicle</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <object data="fml3.svg" type="image/svg+xml"  class="filter" id = "FRAME_Img"></object>
+        </div>
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'frame')">
+                frame
+            </button>
+            <button class="tab" onclick="openTab(event, 'fork')">
+                fork
+            </button>
+            <button class="tab" onclick="openTab(event, 'rims')">
+                rims
+            </button>
+            <button class="tab" onclick="openTab(event, 'saddle')">
+                saddle
+            </button>
+            <button class="tab" onclick="openTab(event, 'lever')">
+                lever
+            </button>
+            <button class="tab" onclick="openTab(event, 'barTape')">
+                bar tape
+            </button>
+        
+            <div id="frame" class="tabcontent default">
+                <button class='color' id="green"></button>
+                <button class='color' id="orange"></button>
+                <button class='color' id="asphalt"></button>
+                <button class='color' id="red"></button>
+            </div>
+        
+            <div id="fork" class="tabcontent">
+                <button class='color'></button>
+            </div>
+        
+            <div id="rims" class="tabcontent">
+                <button class='color'></button>
+            </div>
+            <div id="saddle" class="tabcontent">
+                <button class='color'></button>
+            </div>
+            <div id="lever" class="tabcontent">
+                <button class='color'></button>
+            </div>
+            <div id="barTape" class="tabcontent">
+                <button class='color'></button>
+            </div>
+        </div>
+        <button id="rotate">rotate</button>
+        <script src="index.js"></script>
+    </body>
+</html>
