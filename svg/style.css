@@ -1,105 +1,96 @@
+:root {
+    --color: #363636;
+    --bcolor: #343953;
+    --backgroundColor: #ebebeb;
+    --blob: url('blob.svg');
+    --modeColor: #d5d5d8;
+    --dropShadow: drop-shadow(2px 2px 5px #d4d4d4);
+    --bikeContainerColor: rgba(221, 223, 224, 0.8);
+    --moveColor: linear-gradient(
+        81deg,
+        rgb(236, 240, 243) 0%,
+        rgb(231, 235, 238) 71%
+    );
+    --colorButton: 1px solid rgba(153, 153, 153, 0.5);
+    --homePageText: #fdfdfd;
+}
+
+.dark {
+    --backgroundColor: rgba(0, 0, 0, 0.9);
+    --bcolor: #ffffff;
+    --pcolor: #dde1ee;
+    --blob: url('blob_dark.svg');
+    /* --modeColor: #343953; */
+    --modeColor: rgba(53, 197, 243, 0.5);
+    --dropShadow: drop-shadow(5px 4px 12px #0e0e0e);
+    --bikeContainerColor: rgba(18, 18, 18, 0.6);
+    --moveColor: linear-gradient(
+        81deg,
+        rgb(83, 83, 83) 0%,
+        rgb(65, 64, 64) 71%
+    );
+    --colorButton: 1px solid rgba(229, 229, 225, 0.5);
+    --hoverColor: #ebebeb;
+    /* --homePageText: #fdfdfd; */
+}
+
 body {
+    box-sizing: border-box;
+    background: var(--backgroundColor);
+    background-repeat: no-repeat;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-weight: 300;
+    color: var(--pcolor);
+    text-align: center;
+}
+
+p {
+    font-weight: 300;
+    color: var(--pcolor);
+    text-align: center;
 }
 
 .container {
-    height: 500px;
-    width: 500px;
+    /* margin-left: 400px; */
+    background-color: var(--bikeContainerColor);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: var(--dropShadow);
+    border: 1px solid rgba(116, 116, 116, 0.3);
 }
 
 .filter {
-    height: 400px;
+    height: 600px;
+    margin-left: -100px;
 }
 
-/* blue frame, fork 
-invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%) */
-
-/* blue saddle
-invert(42%) sepia(13%) saturate(8994%) hue-rotate(215deg) brightness(23%) contrast(97%) */
-
-/* green saddle, handle
-invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%) */
-
-/* asfalt frame, rims, fork, saddle
-invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%) */
-
-/* asfalt lever, handle
-invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%) */
-
-/* black lever
-invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(148%) */
-
-/* red frame, fork
-invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
-
-/* red rims
-invert(90%) sepia(30%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
-
-/* red saddle
-invert(60%) sepia(20%) saturate(7049%) hue-rotate(5358deg) brightness(40%) contrast(90%) */
-
-/* red handle
-invert(30%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
-
-/* frame 
-blue  invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%)
-asflat invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
-red invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
-
-/* fork
-blue invert(62%) sepia(13%) saturate(5994%) hue-rotate(215deg) brightness(23%) contrast(97%) 
-asflat invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
-red invert(90%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(50%) contrast(90%) */
-
-/* rims 
-asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
-red invert(90%) sepia(30%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
-
-/* saddle 
-blue invert(42%) sepia(13%) saturate(8994%) hue-rotate(215deg) brightness(23%) contrast(97%)
-green invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%)
-asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(50%) contrast(98%)
-red invert(60%) sepia(20%) saturate(7049%) hue-rotate(5358deg) brightness(40%) contrast(90%) */
-
-/* lever 
-asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%)
-black invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(148%) */
-
-/* handle 
-green invert(20%) sepia(80%) saturate(5049%) hue-rotate(8358deg) brightness(30%) contrast(90%)
-asfalt invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg) brightness(30%) contrast(98%)
-red invert(30%) sepia(40%) saturate(5049%) hue-rotate(358deg) brightness(30%) contrast(90%) */
-
-#FRAME {
-    filter: invert(10%) sepia(32%) saturate(0%) hue-rotate(182deg)
-        brightness(50%) contrast(98%);
-}
-
-body {
-    /* box-sizing: border-box; */
-}
-
-.tab {
+.tab,
+.tab2 {
     overflow: hidden;
     border: 1px solid transparent;
     background: transparent;
-    width: 200px;
+    width: 100px;
     margin: 0;
+    color: var(--pcolor);
+    letter-spacing: 2px;
 }
 
 .tabs {
-    width: 600px;
+    width: 300px;
     overflow: hidden;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    margin: 0 auto;
     text-align: center;
-    filter: drop-shadow(5px 4px 12px #989fa3);
-    background: rgb(189, 197, 203);
-    background: linear-gradient(
-        81deg,
-        rgb(236, 240, 243) 0%,
-        rgb(207, 212, 216) 71%
-    );
+    filter: var(--dropShadow);
+    bottom: 2em;
+    position: relative;
+    font-weight: lighter;
+    color: var(--pcolor);
 }
 
 button {
@@ -113,65 +104,212 @@ button {
 }
 
 button:hover {
-    background-color: #ddd;
+    /* background-color: rgb(240, 238, 238); */
+    color: rgb(53, 197, 243);
 }
 
-.tab.active {
-    background-color: #b3b9bd;
-    color: white;
+.tab.active,
+.tab2.active {
+    /* color: rgb(85, 83, 83); */
+    color: var(--pcolor);
     outline: none;
+    border-bottom: 1px solid rgb(53, 197, 243);
 }
 
 button:active {
     border: 1px solid white;
 }
 
-.tabcontent {
+.tabcontent,
+.tabcontent2 {
     display: none;
     padding: 6px 12px;
     border-top: none;
+    height: 10em;
 }
 
 .default {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .color {
     border-radius: 50%;
     height: 30px;
     width: 30px;
+    margin: auto;
+    border: var(--colorButton);
 }
 
-#blue {
+#frame_blue,
+#saddle_blue,
+#fork_blue {
     background-color: #223061;
 }
 
-#orange {
+#frame_orange {
     background-color: #f68507;
 }
 
-#green {
+#frame_green,
+#saddle_green,
+#barTape_green,
+#rims_green,
+#fork_green {
     background-color: #1a3f24;
 }
 
-#red {
+#frame_red,
+#saddle_red,
+#barTape_red,
+#fork_red,
+#rims_red {
     background-color: #96060e;
 }
 
-#asphalt {
+#frame_asphalt,
+#saddle_asphalt,
+#lever_asphalt,
+#barTape_asphalt,
+#rims_asphalt,
+#fork_asphalt {
     background-color: #353434;
 }
 
-@keyframes rotation {
+#lever_black {
+    background-color: #070707;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes slide-up {
     from {
-        transform: rotate(0deg);
+        margin-top: 0%;
     }
     to {
-        transform: rotate(359deg);
+        margin-top: -40%;
     }
 }
 
-.rotate {
-    animation: rotation 2s;
+#test2 {
+    animation: 0.3s slide-up;
+}
+
+.tabs2 {
+    display: none;
+    width: 300px;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    filter: var(--dropShadow);
+    font-weight: lighter;
+    color: var(--pcolor);
+}
+
+.colorGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    /* top: 40%; */
+    right: 5%;
+}
+
+#move {
+    z-index: 2;
+    position: relative;
+    top: 10em;
+    background: var(--moveColor);
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+    /* filter: drop-shadow(5px 4px 12px #989fa3); */
+    filter: var(--dropShadow);
+    left: 100px;
+    color: var(--pcolor);
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border: 1px solid rgba(116, 116, 116, 0.3);
+}
+
+#move:hover {
+    background: rgb(53, 197, 243);
+    color: #ffffff;
+}
+
+nav {
+    width: 100%;
+    float: right;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: var(--pcolor);
+    text-decoration: none;
+    margin-right: 1em;
+    display: inline-block;
+    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+a:hover {
+    color: var(--hoverColor);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(53, 197, 243);
+    transition: width 0.25s ease-out;
+    z-index: 3;
+}
+a:hover::before {
+    width: 100%;
+    z-index: 3;
+}
+
+.btn {
+    cursor: pointer;
+    background: var(--modeColor);
+    color: var(--pcolor);
+    padding: 4px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    font-weight: lighter;
+}
+
+#path1 {
+    fill: var(--blobColor);
+}
+
+.logo {
+    height: 2em;
+    top: 0;
+}
+
+.bikeContainer {
+    height: 500px;
 }

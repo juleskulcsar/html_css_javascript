@@ -2,59 +2,90 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <title>SVG Bycicle</title>
         <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
-        <div class="container">
-            <object data="fml3.svg" type="image/svg+xml"  class="filter" id = "FRAME_Img"></object>
-        </div>
-        <div class="tabs">
-            <button class="tab active" onclick="openTab(event, 'frame')">
-                frame
-            </button>
-            <button class="tab" onclick="openTab(event, 'fork')">
-                fork
-            </button>
-            <button class="tab" onclick="openTab(event, 'rims')">
-                rims
-            </button>
-            <button class="tab" onclick="openTab(event, 'saddle')">
-                saddle
-            </button>
-            <button class="tab" onclick="openTab(event, 'lever')">
-                lever
-            </button>
-            <button class="tab" onclick="openTab(event, 'barTape')">
-                bar tape
-            </button>
-        
-            <div id="frame" class="tabcontent default">
-                <button class='color' id="green"></button>
-                <button class='color' id="orange"></button>
-                <button class='color' id="asphalt"></button>
-                <button class='color' id="red"></button>
+        <nav>
+            <div><object class="logo" id="logo" data="logo.svg" type="image/svg+xml"  ></object></div>
+            <div>
+                <a href="home/home.html">Home</a>
+                <a href="/Wheels/">Wheels</a>
+                <a href="/About/">About</a>
+                <a href="/Contact/">Contact</a>
+                <div class="btn">Dark</div>
             </div>
-        
-            <div id="fork" class="tabcontent">
-                <button class='color'></button>
+        </nav>
+        <br/>
+        <h1>Find your WHEELS style</h1>
+        <section>
+            <div class="container">
+                <object data="fml3.svg" type="image/svg+xml" class="filter" id="FRAME_Img"></object>
             </div>
-        
-            <div id="rims" class="tabcontent">
-                <button class='color'></button>
+            <div class="colorGroup">
+                <div class="tabs">
+                    <button class="tab active" onclick="openTab(event, 'frame')">
+                        frame
+                    </button>
+                    <button class="tab" onclick="openTab(event, 'fork')">
+                        fork
+                    </button>
+                    <button class="tab" onclick="openTab(event, 'rims')">
+                        rims
+                    </button>
+                
+                    <div id="frame" class="tabcontent default">
+                        <button class='color' id="frame_green"></button>
+                        <button class='color' id="frame_orange"></button>
+                        <button class='color' id="frame_asphalt"></button>
+                        <button class='color' id="frame_red"></button>
+                    </div>
+                
+                    <div id="fork" class="tabcontent ">
+                        <button class='color' id="fork_green"></button>
+                        <!-- <button class='color' id="fork_blue"></button> -->
+                        <button class='color' id="fork_asphalt"></button>
+                        <button class='color' id="fork_red"></button>
+                    </div>
+                
+                    <div id="rims" class="tabcontent">
+                        <button class='color' id="rims_green"></button>
+                        <button class='color' id="rims_asphalt"></button>
+                        <button class='color' id="rims_red"></button>
+                    </div>
+                </div>
+                <div class="tabs2">
+                    <button class="tab2 active" onclick="openTab2(event, 'saddle')">
+                        saddle
+                    </button>
+                    <button class="tab2" onclick="openTab2(event, 'lever')">
+                        lever
+                    </button>
+                    <button class="tab2" onclick="openTab2(event, 'barTape')">
+                        bar tape
+                    </button>
+                
+                    <div id="saddle" class="tabcontent2 default">
+                        <button class='color' id="saddle_blue"></button>
+                        <button class='color' id="saddle_green"></button>
+                        <button class='color' id="saddle_asphalt"></button>
+                        <button class='color' id="saddle_red"></button>
+                    </div>
+                    <div id="lever" class="tabcontent2">
+                        <button class='color' id="lever_asphalt"></button>
+                        <button class='color' id="lever_black"></button>
+                    </div>
+                    <div id="barTape" class="tabcontent2">
+                        <button class='color' id="barTape_green"></button>
+                        <button class='color' id="barTape_asphalt"></button>
+                        <button class='color' id="barTape_red"></button>
+                    </div>
+                </div>
             </div>
-            <div id="saddle" class="tabcontent">
-                <button class='color'></button>
-            </div>
-            <div id="lever" class="tabcontent">
-                <button class='color'></button>
-            </div>
-            <div id="barTape" class="tabcontent">
-                <button class='color'></button>
-            </div>
-        </div>
-        <button id="rotate">rotate</button>
+            <button id="move">continue</button>
+        </section>
         <script src="index.js"></script>
     </body>
 </html>
