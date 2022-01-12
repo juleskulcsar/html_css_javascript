@@ -3,89 +3,139 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <title>SVG Bycicle</title>
+        <title>Bycicle color customization</title>
         <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
-        <nav>
-            <div><object class="logo" id="logo" data="logo.svg" type="image/svg+xml"  ></object></div>
-            <div>
-                <a href="home/home.html">Home</a>
-                <a href="/Wheels/">Wheels</a>
-                <a href="/About/">About</a>
-                <a href="/Contact/">Contact</a>
-                <div class="btn">Dark</div>
+        <nav aria-label="logo">
+            <div ><object class="logo" id="logo" data="logo.svg" type="image/svg+xml"  aria-label="logo" tabindex="1"       ></object></div>
+            <div class="rightSideNav" >
+                <ol class="rightSideNav">
+                    <li><a href="home/home.html" aria-current="home page" tabindex="1">Home</a></li>
+                    <li><a href="/Wheels/" aria-current="bikes page" tabindex="1">Wheels</a></li>
+                    <li><a href="/About/" aria-current="about page" tabindex="1">About</a></li>
+                    <li><a href="/Contact/" aria-current="contact page" tabindex="1">Contact</a></li>
+                </ol>
+                <button class="btn" tabindex="1">Dark mode</button>
             </div>
         </nav>
         <br/>
-        <h1>Find your WHEELS style</h1>
-        <section>
-            <div class="container">
-                <object data="fml3.svg" type="image/svg+xml" class="filter" id="FRAME_Img"></object>
+        <h1 tabindex="1">Find your WHEELS style </h1>
+        <div class="main" >
+            <div class="details-card">
+                <h2>Your WHEELS</h2>
+                <h3>Road Bike</h3>
+                <ul class="bike-details">
+                    <li>Frame : <p>green</p> </li>
+                    <li>Fork : <p>green</p></li>
+                    <li>Rims : <p>green</p></li>
+                    <li>Saddle : <p>green</p></li>
+                    <li>Bottle : <p>green</p></li>
+                    <li>Bar tape : <p>green</p></li>
+                </ul>
+                <div class="product-price"><small>$1799.00</small> $1199.99</div>
+                <button class='preorder'>Pre-order now</button>
             </div>
-            <div class="colorGroup">
-                <div class="tabs">
-                    <button class="tab active" onclick="openTab(event, 'frame')">
-                        frame
-                    </button>
-                    <button class="tab" onclick="openTab(event, 'fork')">
-                        fork
-                    </button>
-                    <button class="tab" onclick="openTab(event, 'rims')">
-                        rims
-                    </button>
-                
-                    <div id="frame" class="tabcontent default">
-                        <button class='color' id="frame_green"></button>
-                        <button class='color' id="frame_orange"></button>
-                        <button class='color' id="frame_asphalt"></button>
-                        <button class='color' id="frame_red"></button>
+            <div class="leftContainer">
+                <div class="slideshow-container">
+                    <div class="bikeSlides fade">
+                        <object data="fml3.svg" type="image/svg+xml" class="filter" id="FRAME_Img"></object>
                     </div>
-                
-                    <div id="fork" class="tabcontent ">
-                        <button class='color' id="fork_green"></button>
-                        <!-- <button class='color' id="fork_blue"></button> -->
-                        <button class='color' id="fork_asphalt"></button>
-                        <button class='color' id="fork_red"></button>
-                    </div>
-                
-                    <div id="rims" class="tabcontent">
-                        <button class='color' id="rims_green"></button>
-                        <button class='color' id="rims_asphalt"></button>
-                        <button class='color' id="rims_red"></button>
-                    </div>
+                    <div class="bikeSlides fade">
+                        <object data="fml1.svg" type="image/svg+xml" class="filter" id="FRAME_Img_2"></object>
+                    </div>              
+                    <div class="bikeSlides fade">
+                        <object data="fml2.svg" type="image/svg+xml" class="filter" id="FRAME_Img_3"></object>
+                    </div> 
+                    <button aria-label="previous image" class="prev" onclick="plusSlides(-1)" tabindex="1">&#10094;</button>
+                    <button aria-label="next image" class="next" onclick="plusSlides(1)" tabindex="1">&#10095;</button>
                 </div>
-                <div class="tabs2">
-                    <button class="tab2 active" onclick="openTab2(event, 'saddle')">
-                        saddle
-                    </button>
-                    <button class="tab2" onclick="openTab2(event, 'lever')">
-                        lever
-                    </button>
-                    <button class="tab2" onclick="openTab2(event, 'barTape')">
-                        bar tape
-                    </button>
-                
-                    <div id="saddle" class="tabcontent2 default">
-                        <button class='color' id="saddle_blue"></button>
-                        <button class='color' id="saddle_green"></button>
-                        <button class='color' id="saddle_asphalt"></button>
-                        <button class='color' id="saddle_red"></button>
-                    </div>
-                    <div id="lever" class="tabcontent2">
-                        <button class='color' id="lever_asphalt"></button>
-                        <button class='color' id="lever_black"></button>
-                    </div>
-                    <div id="barTape" class="tabcontent2">
-                        <button class='color' id="barTape_green"></button>
-                        <button class='color' id="barTape_asphalt"></button>
-                        <button class='color' id="barTape_red"></button>
-                    </div>
+    
+                <div style="text-align:center; margin-left: 2em;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            <button id="move">continue</button>
-        </section>
+            <div class="rightContainer">
+                <div class="slide">
+                    <div class="colorGroup">
+                        <div class="tabs" >
+                            <button aria-label="select frame colors" class="tab active" onclick="openTab(event, 'frame')" tabindex="1">
+                                frame
+                            </button>
+                            <button aria-label="select fork colors" class="tab" onclick="openTab(event, 'fork')" tabindex="2">
+                                fork
+                            </button>
+                            <button aria-label="select rims colors" class="tab" onclick="openTab(event, 'rims')" tabindex="3">
+                                rims
+                            </button>
+                    
+                            <div id="frame" class="tabcontent default" >
+                                <button class='color' id="frame_green" title="green" tabindex="1"></button>
+                                <button class='color' id="frame_orange" title="dark brick" tabindex="1"></button>
+                                <button class='color' id="frame_asphalt" title="dark asphalt" tabindex="1"></button>
+                                <button class='color' id="frame_red" title="wine red" tabindex="1"></button>
+                            </div>
+                    
+                            <div id="fork" class="tabcontent ">
+                                <button class='color' id="fork_green" title="green" tabindex="2"></button>
+                                <button class='color' id="fork_asphalt" title="dark asphalt" tabindex="2"></button>
+                                <button class='color' id="fork_red" title="wine red" tabindex="2"></button>
+                            </div>
+                    
+                            <div id="rims" class="tabcontent">
+                                <button class='color' id="rims_green" title="green" tabindex="3"></button>
+                                <button class='color' id="rims_asphalt" title="dark asphalt" tabindex="3"></button>
+                                <button class='color' id="rims_red" title="wine red" tabindex="3"></button>
+                            </div>
+                        </div>
+                        <div class="tabs2" tabindex="3">
+                            <button class="tab2 active" onclick="openTab2(event, 'saddle')" tabindex="7">
+                                saddle
+                            </button>
+                            <button class="tab2" onclick="openTab2(event, 'bottle')" tabindex="4">
+                                bottle
+                            </button>
+                            <button class="tab2" onclick="openTab2(event, 'barTape')" tabindex="5">
+                                bar tape
+                            </button>
+                    
+                            <div id="saddle" class="tabcontent2 default">
+                                <!-- <button class='color' id="saddle_blue"></button> -->
+                                <button class='color' id="saddle_asphalt" title="dark asphalt" tabindex="7"></button>
+                                <button class='color' id="saddle_green" title="green" tabindex="7"></button>
+                                <button class='color' id="saddle_red" title="dark red" tabindex="7"></button>
+                            </div>
+                            <div id="bottle" class="tabcontent2">
+                                <button class='color' id="bottle_asphalt" title="dark asphalt" tabindex="4"></button>
+                                <button class='color' id="bottle_black" title="black" tabindex="4"></button>
+                            </div>
+                            <div id="barTape" class="tabcontent2">
+                                <button class='color' id="barTape_green" title="green" tabindex="5"></button>
+                                <button class='color' id="barTape_asphalt" title="dark asphalt" tabindex="5"></button>
+                                <button class='color' id="barTape_red" title="dark red" tabindex="5"></button>
+                            </div>
+                        </div>
+                        <button class="animated-arrow" tabindex="6">
+                            <span class="the-arrow -left">
+                                <span class="shaft"></span>
+                            </span>
+                            <span class="main">
+                                <span class="arrow-text">
+                                    back to frame
+                                </span>
+                                <span class="the-arrow -right">
+                                    <span class="shaft"></span>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <button id="move" tabindex="6">next</button>
+            </div>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
