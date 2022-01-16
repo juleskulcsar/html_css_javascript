@@ -1,0 +1,176 @@
+@import url('../style.css');
+:root {
+    --gradient: linear-gradient(rgba(0, 0, 0, 0.9), rgba(22, 22, 22, 0.9));
+    --reversedGradient: linear-gradient(
+        rgba(22, 22, 22, 0.9),
+        rgba(0, 0, 0, 0.9)
+    );
+    --background: rgba(0, 0, 0, 1);
+}
+
+.light {
+    --gradient: linear-gradient(rgba(241, 241, 241, 0.9), rgb(236, 240, 243));
+    --reversedGradient: linear-gradient(
+        rgb(236, 240, 243),
+        rgba(241, 241, 241, 0.9)
+    );
+    --background: rgb(236, 240, 243);
+    --homeTextContainer: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    background: var(--background);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p,
+h1 {
+    text-align: left;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h3 {
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.active {
+    border-bottom: 2px solid rgba(53, 197, 243, 0.7);
+}
+
+.anchor-button-wrapper::before {
+    background-color: transparent;
+}
+
+#home-section {
+    background-image: url('../images/layers.png'), var(--gradient);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    margin-left: calc(10vw + 1em);
+}
+
+.homeButtonsContainer {
+    z-index: 2;
+}
+
+.section {
+    height: 100vh;
+    background: var(--gradient);
+}
+
+.section__storyImages {
+    background: var(--reversedGradient);
+    padding-top: 3em;
+}
+
+.square-image {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1em;
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.square-image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.square-image-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    color: var(--bcolor);
+    font-weight: lighter;
+    line-height: calc(1.5em + 0.5vw);
+    margin: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: var(--gradient);
+    height: 8em;
+    padding-top: 2em;
+}
+
+#logo-bottom {
+    height: 1.5em;
+}
+.footer-text {
+    font-size: 0.7em;
+    font-weight: lighter;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: 0.9s all ease;
+}
+
+.reveal.inView {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        overflow: hidden;
+    }
+    .homeContainer {
+        width: 100%;
+        margin-left: 1em;
+    }
+
+    p {
+        font-weight: lighter;
+    }
+
+    .section {
+        position: relative;
+        top: 2em;
+    }
+
+    .square-image-container {
+        margin: 2em 2em 0 2em;
+    }
+
+    .square-image-container:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .square-image-container:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .square-image {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-sections {
+        padding: 1em;
+    }
+}
